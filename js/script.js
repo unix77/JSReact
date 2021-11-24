@@ -18,7 +18,7 @@ const options = {
 for(let key in options) {
 	console.log(`Attribute ${key} whose value is ${options[key]}`);
 }
-
+	
 //print all the values of the keys of an object
 console.log(Object.keys(options));
 
@@ -74,3 +74,4 @@ arr.sort(compareNum());
 function compareNum(a , b){
     return a-b;
 }
+

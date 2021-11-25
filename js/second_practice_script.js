@@ -40,6 +40,21 @@ while( i < numberOfFilms ){
         i++;
     }
 }
+
+//alternative 
+//a y b se borran de memoria una vez que el for termino
+for( let i = 0 , a = 0, b = 0 ; i < numberOfFilms ; i++ ){
+    a = prompt("Tell me one of the last movies you saw", '');
+    b = prompt("From 0 to 10, how much did you like it ?", 'Insert number');
+    if(a.length > 50 || a == '' || 0 > b > 10){
+        console.log("Try again !");
+    }
+    else{
+        personalMovieDB.movies[a] = b;
+        i++;
+    }
+
+}
  count = personalMovieDB.count;
 
 switch(count) {

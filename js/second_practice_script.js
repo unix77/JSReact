@@ -12,6 +12,48 @@
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-'use strict';
+let lastMovie = ' ',
+    rating = 0,
+    i = 0,
+    count = 0;
 
-// Код возьмите из предыдущего домашнего задания
+let numberOfFilms = +prompt("How many movies have you seen ?", 'Insert number');
+
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {}, //empty object
+    actors: {},
+    genres: [],
+    privat: false,
+};
+
+//1
+while( i < numberOfFilms ){
+    lastMovie = prompt("Tell me one of the last movies you saw", '');
+    rating = prompt("From 0 to 10, how much did you like it ?", 'Insert number');
+    if(lastMovie.length > 50 || lastMovie == '' || 0 > rating > 10){
+        console.log("Try again !");
+    }
+    else{
+        personalMovieDB.movies[lastMovie] = rating;
+        i++;
+    }
+}
+ count = personalMovieDB.count;
+
+switch(count) {
+    case (count < 3):
+        console.log("Junior cineman");
+        break;
+    case (5 > count > 3):
+        console.log("Medium cineman");
+        break;
+    case (8 > count > 5):
+        console.log("Expert cineman");
+        break;
+}
+
+
+console.log(personalMovieDB);
+

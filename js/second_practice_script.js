@@ -53,7 +53,6 @@ for( let i = 0 , a = 0, b = 0 ; i < numberOfFilms ; i++ ){
         personalMovieDB.movies[a] = b;
         i++;
     }
-
 }
  count = personalMovieDB.count;
 
